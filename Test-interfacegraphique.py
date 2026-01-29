@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 import numpy as np
 from scipy.io import wavfile
 import os
-import Code_Attenuation as audio_algo  # ton module de traitement
+import Code_Transposition_Lineaire as audio_algo  # ton module de traitement
 import Code_Compression
 import Code_Transposition_Non_Lineaire
 
@@ -25,7 +25,7 @@ audio_sources = {
     "Briac": os.path.join(BASE_DIR, "audios sources/Briac_recette.wav")
 }
 
-# Méthodes disponibles (tu peux ajouter plus de fonctions depuis Code_Attenuation)
+# Méthodes disponibles (tu peux ajouter plus de fonctions depuis Code_Transposition_Lineaire)
 attenuation_methods = {
     "Transposition linéaire": audio_algo.transposition_frequentielle_lineaire,
     "Compression Fréquentielle": Code_Compression.compression_frequentielle,
@@ -131,7 +131,7 @@ def update_graphs(source, method, freq_max):
     # --- Traitement dynamique ---
     treated_file = TEMP_FILE
     try:
-        # Appel de la fonction de traitement depuis Code_Attenuation
+        # Appel de la fonction de traitement depuis Code_Transposition_Lineaire
         attenuation_func = attenuation_methods[method]
         # Exemple pour transposition linéaire : freq_source fixé à 4000Hz, freq_cible dépend du slider
         attenuation_func(
