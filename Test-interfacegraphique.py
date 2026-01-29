@@ -21,8 +21,8 @@ import Code_Transposition_Non_Lineaire
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 audio_sources = {
-    "Emma": os.path.join(BASE_DIR, "Emma_recette.wav"),
-    "Briac": os.path.join(BASE_DIR, "Briac_recette.wav")
+    "Emma": os.path.join(BASE_DIR, "audios sources/Emma_recette.wav"),
+    "Briac": os.path.join(BASE_DIR, "audios sources/Briac_recette.wav")
 }
 
 # Méthodes disponibles (tu peux ajouter plus de fonctions depuis Code_Attenuation)
